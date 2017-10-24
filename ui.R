@@ -21,12 +21,12 @@ shinyUI(fluidPage(
     sliderInput("delta",
                 "Differential",
                 min = 0, max = 3, value = 1.31, step = 0.01),
-    sliderInput("sigma",
-                "Standard Deviation",
-                min = .5 , max = 5, value = 1, step = 0.1),
+    # sliderInput("sigma",
+    #             "Standard Deviation",
+    #             min = .5 , max = 5, value = 1, step = 0.1),
     sliderInput("n_sims",
                 "Number of Simulations",
-                min = 10, max = 110, value = 20, step = 10)
+                min = 10, max = 110, value = 50, step = 10)
     ),
     # Show a plot of the generated distribution
     mainPanel(
