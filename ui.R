@@ -12,7 +12,7 @@ shinyUI(fluidPage(
   # Application title
   titlePanel("Clinical Trial Power Simulation"),
 
-  # Sidebar with a slider input for number of bins
+  # Sidebar with a slider for each parameter
   sidebarLayout(
     sidebarPanel(
       sliderInput("n",
@@ -23,12 +23,12 @@ shinyUI(fluidPage(
                 min = 0, max = 3, value = 1.31, step = 0.01),
     # sliderInput("sigma",
     #             "Standard Deviation",
-    #             min = .5 , max = 5, value = 1, step = 0.1),
+    #             min = .5 , max = 5, value = 3.4, step = 0.1),
     sliderInput("n_sims",
                 "Number of Simulations",
-                min = 10, max = 110, value = 50, step = 10)
+                min = 10, max = 110, value = 30, step = 10)
     ),
-    # Show a plot of the generated distribution
+    # Show a plot of Power vs. sample size 
     mainPanel(
       plotOutput("powerPlot")
     )
